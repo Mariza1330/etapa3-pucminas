@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Management;
 
@@ -36,7 +36,7 @@ namespace ComputerInventory
 
         static void InventoryHardware()
         {
-            string filePath = @"C:\InventarioHardware.dat";
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "InventarioHardware.dat");
             using (StreamWriter writer = new StreamWriter(filePath))
             {
                 writer.WriteLine("Inventário de Hardware");
@@ -66,7 +66,7 @@ namespace ComputerInventory
 
         static void InventorySoftware()
         {
-            string filePath = @"C:\InventarioSoftware.dat";
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "InventarioSoftware.dat");
             using (StreamWriter writer = new StreamWriter(filePath))
             {
                 writer.WriteLine("Inventário de Software");
